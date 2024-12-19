@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -26,12 +27,19 @@ const Projects = () => {
 
   return (
     <div>
+  
       <h1>Projects</h1>
+      <NavBar/>
+      <h1> Hi</h1>
       {projects.map((project) => (
-        <div key={project.id}>
-          <h2>{project.Title}</h2>
-          <p>{project.Description}</p>
+        <div className="card" style={{ width: "25rem" }}>
+        <div className="card-body">
+          <h5 className="card-title">{project.Title}</h5>
+          <p className="card-text">{project.Description}</p>
+          <a href="/" className="btn btn-primary">See More</a>
         </div>
+      </div>
+  
       ))}
     </div>
   );
