@@ -28,19 +28,22 @@ const Projects = () => {
   return (
     <div>
   
-      <h1>Projects</h1>
+      <h1 className = "m-4">Projects</h1>
       <NavBar/>
-      <h1> Hi</h1>
-      {projects.map((project) => (
-        <div className="card" style={{ width: "25rem" }}>
+      <div className = "row mx-3">
+      {projects.map((project) => ( 
+          <div className = "col-3 mx-5">
+        <div className="card m-3" style={{ width: "25rem" }}>
+        <img src={"http://localhost:1337"+project.Image.formats.large.url} class="card-img-top" alt="Project"/>
         <div className="card-body">
           <h5 className="card-title">{project.Title}</h5>
           <p className="card-text">{project.Description}</p>
-          <a href="/" className="btn btn-primary">See More</a>
+          <a href={"https://github.com/LoganChu/"+project.Title.split(" ").join("")} className="btn btn-primary">Learn More</a>
         </div>
       </div>
-  
+     </div>  
       ))}
+    </div>
     </div>
   );
 };
