@@ -1,24 +1,48 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import "./styles.css";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div className = "container-fluid">
-      <nav className = "navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark text-light fixed-top" style = {{opacity: 0.85, height: "4rem"}}>
-        <div className = "navbar-brand"> Navbar Name </div>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link" href="\about">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="\projects">Projects</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href = "\contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <div className = "container-fluid custom-grey">
+          <nav className = "navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
+            <div className = "navbar-brand mx-3"> Logan Chu </div>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ms-auto">
+                <li className="nav-item mx-3">
+                  <a className="nav-link active" href="\about" style = {{fontSize: "18px"}}>About</a>
+                </li>
+                <li className="nav-item mx-3">
+                  <a className="nav-link" href="\projects" style = {{fontSize: "18px"}}>Projects</a>
+                </li>
+                <li className="nav-item mx-3">
+                  <a className="nav-link" href = "\contact" style = {{fontSize: "18px"}}>Contact</a>
+                </li>
+                <li className = "nav-item mx-3">
+                  <a
+                    href="https://github.com/LoganChu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mx-3"
+                  >
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                  </a>  
+                </li>
+                <li className = "nav-item mx-3">
+                  <a
+                    href="https://www.linkedin.com/in/LoganChu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mx-3"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
     <div className="container py-5">
       {/* Page Header */}
       <header className="text-center mb-4">
@@ -32,10 +56,10 @@ const Home = () => {
       <section className="row align-items-center mb-5">
         <div className="col-md-4 text-center">
           <img
-            src="https://via.placeholder.com/150"
+            src="/images/Profile.jpg"
             alt="Your Profile"
             className="rounded-circle img-fluid shadow"
-            style={{ width: "150px", height: "150px" }}
+            style={{ width: "250px", height: "250px" }}
           />
         </div>
         <div className="col-md-8">
@@ -95,13 +119,7 @@ const Home = () => {
           projects.
         </p>
       </section>
-
-      {/* Footer Section */}
-      <footer className="text-center mt-5">
-        <p className="text-muted">
-          © 2024 Your Name. Built with ❤️ using React and Bootstrap.
-        </p>
-      </footer>
+      <Footer/>
     </div>
     </div>
   );
