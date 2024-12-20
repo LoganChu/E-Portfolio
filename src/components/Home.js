@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className = "container-fluid">
         <title>Logan Chu Personal Website</title>
-        <nav className = "navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark text-light opacity-100">
+        <nav className = "navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark text-light fixed-top" style = {{opacity: 0.85, height: "4rem"}}>
           <div className = "navbar-brand"> Navbar Name </div>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
