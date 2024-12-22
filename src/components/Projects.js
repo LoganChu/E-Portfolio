@@ -29,8 +29,8 @@ const Projects = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className = "container-fluid custom-grey">
-      <nav className = "navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
+    <div className = "container-fluid background-grey">
+      <nav className = "navbar navbar-collapse navbar-expand-lg navbar-grey navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
         <div className = "navbar-brand mx-3"> Logan Chu </div>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
@@ -72,10 +72,10 @@ const Projects = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        height: "15rem"
+        height: "14rem"
       }}
     >
-        <h1 className="display-4 fw-bold text-dark m-4" style={{height: "5rem"}}>My Projects</h1>
+        <h1 className="display-4 text-dark m-4" style={{height: "4rem"}}>My Projects</h1>
         <p className="lead text-dark">
           Explore the projects I’ve worked on, showcasing my skills and
           creativity.

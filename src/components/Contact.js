@@ -3,11 +3,46 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./styles.css";
 import Footer from "./Footer";
+import {useState} from 'react';
 
-const Home = () => {
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData)
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      console.log(response);
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send the message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
   return (
-    <div className = "container-fluid custom-grey">
-          <nav className = "navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
+    <div className = "container-fluid background-grey">
+          <nav className = "navbar navbar-collapse navbar-expand-lg navbar-grey navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
             <div className = "navbar-brand mx-3"> Logan Chu </div>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
@@ -44,21 +79,18 @@ const Home = () => {
             </div>
           </nav>
     <div className="container py-5">
-      {/* Page Header */}
-      <header className="text-center mb-4">
+      <header className="text-center m-4">
         <h1 className="display-4">Contact Me</h1>
         <p className="lead">
           Feel free to reach out for collaborations, inquiries, or just to say hello!
         </p>
       </header>
-
-      {/* Contact Form Section */}
-      <div className="row justify-content-center">
+      <div className="row justify-content-center my-5">
         <div className="col-md-8">
           <div className="card shadow">
             <div className="card-body">
               <h4 className="card-title text-center mb-4">Get in Touch</h4>
-              <form>
+              <form onSubmit = {handleSubmit}>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">
                     Your Name
@@ -67,6 +99,8 @@ const Home = () => {
                     type="text"
                     className="form-control"
                     id="name"
+                    onChange = {handleChange}
+                    value = {formData.name}
                     placeholder="Enter your name"
                     required
                   />
@@ -79,6 +113,8 @@ const Home = () => {
                     type="email"
                     className="form-control"
                     id="email"
+                    value = {formData.email}
+                    onChange = {handleChange}
                     placeholder="Enter your email"
                     required
                   />
@@ -90,6 +126,8 @@ const Home = () => {
                   <textarea
                     className="form-control"
                     id="message"
+                    value = {formData.message}
+                    onChange = {handleChange}
                     rows="4"
                     placeholder="Write your message here..."
                     required
@@ -111,4 +149,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Contact;

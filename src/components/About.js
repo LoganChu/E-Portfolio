@@ -6,8 +6,8 @@ import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div className = "container-fluid custom-grey">
-          <nav className = "navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
+    <div className = "container-fluid background-grey">
+          <nav className = "navbar navbar-collapse navbar-expand-lg navbar-grey navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
             <div className = "navbar-brand mx-3"> Logan Chu </div>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
@@ -46,7 +46,7 @@ const Home = () => {
     <div className="container py-5">
       {/* Page Header */}
       <header className="text-center mb-4">
-        <h1 className="display-4">About Me</h1>
+        <h1 className="display-4 m-4">About Me</h1>
         <p className="lead">
           Discover more about me, my background, and what drives me every day!
         </p>
