@@ -43,7 +43,14 @@ const Contact = () => {
   return (
     <div className = "container-fluid background-grey">
           <nav className = "navbar navbar-collapse navbar-expand-lg navbar-grey navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
-            <div className = "navbar-brand mx-3"> Logan Chu </div>
+            <div className = "navbar-brand mx-3">  
+            <img
+            src="/images/Logo.png"
+            alt="Your Profile"
+            className="img-fluid shadow"
+            style={{ width: "55px", height: "50px", background: "transparent"}}
+          />              
+            </div>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item mx-3">

@@ -17,8 +17,8 @@ app.post("/api/contact", async (req, res) => {
     return res.status(400).send("All fields are required.");
   }
 
-  console.log(process.env.GMAIL);
-  console.log(process.env.GMAIL_PASSWORD);
+  //console.log(process.env.GMAIL);
+  //console.log(process.env.GMAIL_PASSWORD);
   try {
     // Configure your email transporter
     const transporter = nodemailer.createTransport({
@@ -29,7 +29,7 @@ app.post("/api/contact", async (req, res) => {
       },
     });
 
-    console.log(transporter);
+    //console.log(transporter);
 
     // Compose the email
     const mailOptions = {

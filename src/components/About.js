@@ -8,7 +8,14 @@ const Home = () => {
   return (
     <div className = "container-fluid background-grey">
           <nav className = "navbar navbar-collapse navbar-expand-lg navbar-grey navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
-            <div className = "navbar-brand mx-3"> Logan Chu </div>
+          <div className = "navbar-brand mx-3">  
+            <img
+            src="/images/Logo.png"
+            alt="Your Profile"
+            className="img-fluid shadow"
+            style={{ width: "55px", height: "50px", background: "transparent"}}
+          />              
+            </div>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item mx-3">
@@ -65,7 +72,7 @@ const Home = () => {
         <div className="col-md-8">
           <h2 className="mb-3">Hi, I'm Logan!</h2>
           <p>
-            I'm a passionate [Your Profession, e.g., Web Developer] with a love
+            I'm a passionate software and hardware engineer with a love
             for creating intuitive and dynamic user experiences. With a strong
             background in [Your Specializations, e.g., React and JavaScript],
             I've been building projects that solve real-world problems and
@@ -116,7 +123,7 @@ const Home = () => {
           Beyond coding, I enjoy exploring nature, experimenting with
           photography, and diving into the latest tech trends. I also love
           connecting with like-minded individuals and contributing to open-source
-          projects.
+          projects. Insert Downloadable Resume or CV here. 
         </p>
       </section>
       <Footer/>
