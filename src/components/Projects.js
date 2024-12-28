@@ -13,7 +13,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:1337/api/projects?populate=*');
+        const response = await axios.get('https://strapi-backend-b9ud.onrender.com/api/projects?populate=*');
         setProjects(response.data.data);
       } catch (err) {
         setError('Failed to fetch data');
@@ -92,7 +92,7 @@ const Projects = () => {
       {projects.map((project) => ( 
         <div className = "col-3">
           <div className="card my-3 shadow" style={{ width: "20rem", outline: "none"}}>
-            <img src={"http://localhost:1337"+project.Image.formats.large.url} class="card-img-top" style={{ height: "13rem" }} alt="Project"/>
+          <img src={"https://strapi-backend-b9ud.onrender.com"+project.Image.formats.large.url} class="card-img-top" style={{ height: "13rem" }} alt="Project"/>
             <div className="card-body" style={{height: "15rem", overflow: "hidden"}}>
               <h5 className="card-title heading-style fw-bold" style={{height: "3rem", overflow: "hidden"}}>{project.Title}</h5>
               <p className="card-text text-style"  style={{height: "6rem", overflow: "hidden"}}>{project.Description}</p>

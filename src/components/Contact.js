@@ -4,6 +4,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./styles.css";
 import Footer from "./Footer";
 import {useState} from 'react';
+import Skills from "./Skills";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -151,6 +152,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer/>
+      <Skills/>
     </div>
     </div>
   );
