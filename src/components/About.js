@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./styles.css";
 import Footer from "./Footer";
+import Skills from "./Skills";
 
 const Home = () => {
   return (
@@ -73,9 +74,7 @@ const Home = () => {
           <h2 className="mb-3">Hi, I'm Logan!</h2>
           <p>
             I'm a passionate software and hardware engineer with a love
-            for creating intuitive and dynamic user experiences. With a strong
-            background in [Your Specializations, e.g., React and JavaScript],
-            I've been building projects that solve real-world problems and
+            for building projects that solve real-world problems and
             inspire innovation.
           </p>
           <p>
@@ -86,6 +85,7 @@ const Home = () => {
       </section>
 
       {/* Skills Section */}
+      <Skills/>
       <section className="mb-5">
         <h3 className="text-center mb-4">Skills</h3>
         <div className="row text-center">
@@ -93,7 +93,7 @@ const Home = () => {
             <div className="card shadow-sm">
               <div className="card-body">
                 <h5 className="card-title">Frontend Development</h5>
-                <p className="card-text">React, HTML, CSS, JavaScript</p>
+                <p className="card-text">React, HTML, CSS, JavaScript, Bootstrap</p>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ const Home = () => {
             <div className="card shadow-sm">
               <div className="card-body">
                 <h5 className="card-title">Backend Development</h5>
-                <p className="card-text">Node.js, Express, MongoDB</p>
+                <p className="card-text">Node.js, Express.js</p>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Home = () => {
             <div className="card shadow-sm">
               <div className="card-body">
                 <h5 className="card-title">Other Skills</h5>
-                <p className="card-text">Git, API Integration, Responsive Design</p>
+                <p className="card-text">Git, Jest, Strapi, AI Integration</p>
               </div>
             </div>
           </div>

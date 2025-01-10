@@ -30,7 +30,7 @@ const Projects = () => {
 
   return (
     <div className = "container-fluid background-grey">
-      <nav className = "navbar navbar-collapse navbar-expand-lg navbar-grey navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
+      <nav className = "navbar navbar-collapse navbar-expand navbar-grey navbar-dark text-light fixed-top" style = {{opacity: 0.9, height: "4rem"}}>
       <div className = "navbar-brand mx-3">  
             <img
             src="/images/Logo.png"
